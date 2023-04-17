@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Automation Practice</title>
+    <link
+      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>Automation Practice (QACircle)</h1>
+    <p id="loading-text" style="text-align: center; color: blue">
+      Loading please wait .....
+    </p>
+    <div id="buttons">
+      <b>Buttons:</b>
+      <button
+        name="submit_button"
+        onclick="buttonClickedAlert('Submit')"
+        qa="circle"
+      >
+        Submit
+      </button>
+      <button id="reset_button" onclick="buttonClickedAlert('Reset')">
+        Reset
+      </button>
+      <button
+        onclick="buttonClickedAlert('Save')"
+        class="qa_circle qa_training qa_placements"
+      >
+        Save
+      </button>
+      <button id="reload_data" onclick="buttonClickedAlert('Reload Data')">
+        Reload Data
+      </button>
+      <button onclick="buttonClickedAlert('Close')"><span>Close</span></button>
+      <button disabled onclick="buttonClickedAlert('Try to click')">
+        Try to click
+      </button>
+      <button disabled id="send-sms" onclick="buttonClickedAlert('Send SMS')">
+        Send SMS
+      </button>
+    </div>
+    <div id="checkboxes">
+      <b>CheckBox:</b>
+      <input type="checkbox" value="project-1" />
+      <label class="label">Project 1</label>
+      <input type="checkbox" value="project-2" />
+      <label class="label">Project 2</label>
+      <input type="checkbox" value="project-3" />
+      <label class="label">Project 3</label>
+      <input type="checkbox" value="project-4" />
+      <label class="label">Project 4</label>
+      <input type="checkbox" value="project-5" />
+      <label class="label">Project 5</label>
+      <div class="div-align">
+        <input type="checkbox" value="project-6" />
+        <label class="label">None</label>
+      </div>
+    </div>
+    <div id="radios">
+      <b>Radio:</b>
+      <input type="radio" value="project-1" name="projects" />
+      <label class="label">Project 1</label>
+      <input type="radio" value="project-2" name="projects" />
+      <label class="label">Project 2</label>
+      <input type="radio" value="project-3" name="projects" />
+      <label class="label">Project 3</label>
+      <input type="radio" value="project-4" name="projects" />
+      <label class="label">Project 4</label>
+      <input type="radio" value="project-5" name="projects" />
+      <label class="label">Project 5</label>
+    </div>
+    <div id="content">
+      <b>Text Box:</b>
+      <div>
+        <label class="label-input">Employee Name:</label>
+        <input
+          type="text"
+          name="emp_name"
+          title="Please enter your full name"
+          class="input-align"
+          required
+        />
+      </div>
+      <div>
+        <label class="label-input">Project Name:</label>
+        <input
+          class="input-align"
+          type="text"
+          value="Project-QACircle"
+          disabled
+        />
+      </div>
+      <div>
+        <label class="label-input">Description:</label>
+        <textarea id="description"></textarea>
+      </div>
+    </div>
+    <div id="anchor">
+      <b>URL:</b>
+      <li>
+        <a href="https://qacircle.com/">QA Circle</a>
+      </li>
+      <li>
+        <a href="https://qacircle.com/"
+          >Click here for the placement assistance</a
+        >
+      </li>
+    </div>
+    <div id="dropdown">
+      <b>Dropdown:</b>
+      <label class="label">Normal Dropdown:</label>
+      <select name="projects" id="projectName">
+        Select Some Option
+        <option selected disabled>Select any project</option>
+        <option value="Project-1">Project-1</option>
+        <option value="Project-2">Project-2</option>
+        <option value="Project-3">Project-3</option>
+        <option value="Project-4">Project-4</option>
+        <option value="Project-5">Project-5</option>
+        <option value="Project-6">Project-6</option>
+      </select>
+
+      <label class="label">Multi Select Dropdown:</label>
+      <select multiple name="multi-projects" id="mul-projectName">
+        <option value="Project-1">Project-1</option>
+        <option value="Project-2">Project-2</option>
+        <option value="Project-3">Project-3</option>
+        <option value="Project-4">Project-4</option>
+        <option value="Project-5">Project-5</option>
+        <option value="Project-6">Project-6</option>
+      </select>
+    </div>
+    <button
+      id="test_button"
+      style="display: none"
+      onclick="buttonClickedAlert()"
+    >
+      Secret
+    </button>
+    <div id="date">
+      <b>Calendar:</b>
+      <label class="label-input">Date:</label>
+      <input type="text" id="my_date_picker" placeholder="DD/MM/YYYY" />
+    </div>
+    <div id="alerts">
+      <b>Alerts:</b>
+      <button id="test-alert" onclick="alert('This is a dummy alert')">
+        Alert
+      </button>
+      <button id="test-prompt" onclick="showPrompt('Please enter your name!')">
+        Prompt
+      </button>
+    </div>
+    <div id="frames">
+      <b>IFrame:</b>
+      <iframe
+        src="iframe.html"
+        height="200"
+        width="300"
+        title="iframeTest"
+        name="test-iframe"
+        id="test_iframe"
+      ></iframe>
+    </div>
+    <div id="tabs">
+      <b>Tabs:</b>
+      <a href="https://qacircle.com" target="_blank">
+        <button class="tabs">New Tab</button>
+      </a>
+      <a
+        rel="noopener noreferrer"
+        target="_blank"
+        onclick='window.open("https://qacircle.com", "myWindow", "width=1200, height=600");'
+      >
+        <button class="tabs">New Window</button>
+      </a>
+    </div>
+    <div id="file-upload">
+      <b>File Upload:</b>
+      <input
+        style="margin-left: 20px"
+        type="file"
+        oninput="showFileUploadAlert()"
+        id="uploadFile"
+      />
+    </div>
+    <div id="mouse-events">
+      <b>Mouse Events:</b>
+      <button id="left-click" type="button" onclick="openAlert('Left click')">
+        Left Click
+      </button>
+      <button
+        id="double-click"
+        type="button"
+        ondblclick="openAlert('Double click')"
+      >
+        Double Click
+      </button>
+      <button id="right-click" type="button" oncontextmenu="handleRightClick()">
+        Right Click (Context Menu)
+      </button>
+      <button
+        id="mouse-over"
+        type="button"
+        onmouseover="openAlert('Mouse over')"
+      >
+        Mouse Over
+      </button>
+    </div>
+  </body>
+  <script>
+    $(document).ready(function () {
+      $(function () {
+        $("#my_date_picker").datepicker({ dateFormat: "dd/mm/yy" });
+      }),
+        $(function () {
+          $("#loading-text").show().delay(5000).fadeOut();
+        });
+      createDynamicButton();
+      updateAttributeValue();
+      enableSendSmsButton();
+    });
+  </script>
+</html>

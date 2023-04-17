@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Locators Practice</title>
+    <script type="text/javascript" src="index.js"></script>
+    <style>
+      tr,
+      td {
+        min-width: 10px;
+        padding: 10px;
+        text-align: center;
+      }
+
+      button {
+        margin: auto;
+        align-content: center;
+        display: inline-flex;
+        justify-content: center;
+        min-width: 8%;
+        padding: 0.4%;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      #buttons {
+        align-items: center;
+        align-content: center;
+        text-align: center;
+      }
+
+      #buttons b {
+        color: blue;
+        display: flex;
+        justify-content: center;
+        font-size: x-large;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>iframe elements</h1>
+    <div id="buttons">
+      <br />
+      <button name="frame_submit_button" onclick="buttonClickedAlert('Submit')">
+        Submit
+      </button>
+      &nbsp;
+      <button id="frame_reset_button" onclick="buttonClickedAlert('Reset')">
+        Reset
+      </button>
+      &nbsp;
+    </div>
+  </body>
+</html>

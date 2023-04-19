@@ -63,8 +63,6 @@ async function createDynamicButton() {
 function handleRightClick() {
   alert("Right click");
   event.preventDefault();
-  // document.getElementById("right-click").oncontextmenu = function (event) {
-  // };
 }
 
 async function enableSendSmsButton() {

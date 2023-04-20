@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tooltip</title>
+    <link
+      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+      $(function () {
+        $(document).tooltip();
+      });
+    </script>
+    <style>
+      label {
+        display: inline-block;
+        width: 5em;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <label for="age">Name:</label
+      ><input id="age" title="Please enter your name" />
+    </p>
+    <p style="margin-top: 15%">Hover the field to see the tooltip.</p>
+  </body>
+</html>
